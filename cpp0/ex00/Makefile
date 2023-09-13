@@ -6,7 +6,7 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 16:34:27 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/13 16:34:47 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/09/13 16:39:04 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,12 @@ OBJECT = $(SRC:.cpp=.o)
 HEADER = megaphone.hpp
 
 FLAGS = -Wall -Wextra -Werror
-IFLAGS = $(HEADER) 
 CC = c++
 
 
 all: $(NAME)
 
-$(NAME):  $(OBJECT) $(IFLAGS)
+$(NAME):  $(OBJECT) $(HEADER)
 		$(CC) $(FLAGS) $(OBJECT) -o $(NAME) 
 
 clean:
