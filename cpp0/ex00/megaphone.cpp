@@ -6,11 +6,13 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:31:46 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/13 16:29:51 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:42:27 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "megaphone.hpp"
+#include <iostream>
+#include <string>
+#include <cctype>
 
 int main(int argc, char **argv)
 {   
