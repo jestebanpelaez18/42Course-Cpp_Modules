@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 17:41:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/18 19:37:01 by jpelaez-         ###   ########.fr       */
+/*   Created: 2023/09/18 18:06:05 by jpelaez-          #+#    #+#             */
+/*   Updated: 2023/09/18 18:24:27 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <string>
 #include <iostream>
-#include <iomanip>
-#include "Contact.hpp"
 
-class PhoneBook
+class Contact
 {
     public:
-    Contact contacts[8];
-    int num_contacs;
-    void firts_message(void);    
-    void print_contact_list(void);
-    void check_number_contacts(void);    
+    std:: string name;
+    std:: string last_name;
+    std:: string nick_name;
+    std:: string phone_number;
+    std:: string darkest_secret;
+    int index;
 };
+
 
 #endif
