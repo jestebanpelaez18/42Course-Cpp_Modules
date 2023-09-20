@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:05:02 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/18 19:49:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:45:39 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,43 @@ void check_number_contacts(void)
         else
             return;
     }
+}
+
+void search_contact_info(int index)
+{
+    PhoneBook Book;
+    
+    if(index < 8 | index < 0)
+    {
+        std::cout << Book.contacts[index].name << std::endl;
+        std::cout << Book.contacts[index].last_name << std::endl;
+        std::cout << Book.contacts[index].nick_name << std::endl;
+        std::cout << Book.contacts[index].phone_number << std::endl;
+        std::cout << Book.contacts[index].darkest_secret << std::endl;
+    }
+    else if(index > 7)
+    {
+        std::cout << "Error, invalid index" << std::endl;
+        return ;
+    }
+}
+
+
+void phonebook_add(int i)
+{
+    PhoneBook Book;
+    
+    if(Book.num_contacs == 8)
+        i = 0;
+    std::cout << "Introduce the name";
+    std::getline(std::cin,Book.contacts[i].name);
+    std::cout << "Introduce the last name";
+    std::getline(std::cin,Book.contacts[i].last_name);
+    std::cout << "Introduce a nick name";
+    std::getline(std::cin,Book.contacts[i].nick_name);
+    std::cout << "Introduce a phone number";
+    std::getline(std::cin,Book.contacts[i].phone_number);
+    std::cout << "Introduce a Dark secret";
+    std::getline(std::cin,Book.contacts[i].darkest_secret);  
+    Book.contacts->index++;
 }

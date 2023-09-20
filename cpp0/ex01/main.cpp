@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:25:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/18 19:49:45 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/20 18:57:08 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,29 @@ int main(void)
 {
     std:: string Input;
     PhoneBook Book;
+    Contact Cont;
     int i;
+    int index;
 
     Book.firts_message();
+    Book.num_contacs = 0;
+    Cont.index = 0;
     while(1)
     {
         std::getline(std::cin, Input);
         if(Input == "ADD")
         {
-            std::cout << "Introduce the name";
-            std::getline(std::cin,Book.contacts[i].name);
-            std::cout << "Introduce the last name";
-            std::getline(std::cin,Book.contacts[i].last_name);
-            std::cout << "Introduce a nick name";
-            std::getline(std::cin,Book.contacts[i].nick_name);
-            std::cout << "Introduce a phone number";
-            std::getline(std::cin,Book.contacts[i].phone_number);
-            std::cout << "Introduce a Dark secret";
-            std::getline(std::cin,Book.contacts[i].darkest_secret);                               
+            i = Cont.index;
+            Book.phonebook_add(i);                              
             Book.check_number_contacts();
         }
         else if (Input == "SEARCH")
         {
             Book.print_contact_list();
+            std::cout << "Which contact info do you want to see?";
+            std::cout << "Select a index between 1 and 7";
+            std::cin  >> index;
+            Book.search_contact_info(index);
         }
         if(Input == "EXIT")
             break ;   
