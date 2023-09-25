@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 16:41:07 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/21 22:24:34 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/09/25 13:40:25 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJECT = $(SRC:.cpp=.o)
 HEADER = Contact.hpp PhoneBook.hpp 
 
 FLAGS = -Wall -Wextra -Werror 
-CC = clang++
+CC = c++
 IFLAGS = -I $(HEADER)
 
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:06:05 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/21 21:54:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 14:59:00 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Contact
     std:: string nick_name;
     std:: string phone_number;
     std:: string darkest_secret;
-    int index;
 };
 
 

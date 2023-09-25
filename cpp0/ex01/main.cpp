@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:25:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/21 19:33:01 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:22:11 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,20 @@ int main(void)
     int i;
     int index;
 
-    Book.firts_message();
     Book.num_contacs = 0;
-    Cont.index = 0;
+    Book.status = true;
+    i = 0;
+    index = 0;
     while(1)
     {
+        Book.firts_message();
         std::getline(std::cin, Input);
-        if(Input == "ADD")
+        if(Input == "ADD" || Input == "1")
         {
-            i = Cont.index;
-            Book.phonebook_add(i);                              
             Book.check_number_contacts();
+            Book.phonebook_add(i);          
         }
-        else if (Input == "SEARCH")
+        else if (Input == "SEARCH" || Input == "2")
         {
             Book.print_contact_list();
             std::cout << "Which contact info do you want to see?";
@@ -41,7 +42,7 @@ int main(void)
             std::cin  >> index;
             Book.search_contact_info(index);
         }
-        if(Input == "EXIT")
-            break ;   
+        else if(Input == "EXIT" || Input == "3")
+            exit(0);  
     }
 }

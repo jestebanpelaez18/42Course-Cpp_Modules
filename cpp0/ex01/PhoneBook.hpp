@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:41:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/21 18:49:10 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:09:37 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@ class PhoneBook
     public:
     Contact contacts[8];
     int num_contacs;
-    void check_size(std::string str);
     void firts_message(void);    
     void print_contact_list(void);
     void check_number_contacts(void);
     void search_contact_info(int index); 
-    void phonebook_add(int i);
+    void phonebook_add(int& i);
+    bool status;
+    
+    private:
+    void  check_size(std::string str);
 };
 
 #endif
