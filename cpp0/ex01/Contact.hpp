@@ -6,15 +6,12 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:06:05 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/25 14:59:00 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 17:12:57 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
-
-#include <string>
-#include <iostream>
 
 class Contact
 {
@@ -24,6 +21,7 @@ class Contact
     std:: string nick_name;
     std:: string phone_number;
     std:: string darkest_secret;
+    std:: time_t timestamp;
 };
 
 
