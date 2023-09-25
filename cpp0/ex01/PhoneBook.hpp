@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:41:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/25 16:52:20 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 18:51:57 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class PhoneBook
     Contact contacts[8];
     void  check_size(std::string str);
     void search_contact_info(int index); 
+    void clear_old_contact(int i);
 
 };
 

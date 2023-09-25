@@ -6,7 +6,7 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 16:41:07 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/25 13:40:25 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/09/25 18:57:07 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = main.cpp PhoneBook.cpp
 OBJECT = $(SRC:.cpp=.o)
 HEADER = Contact.hpp PhoneBook.hpp 
 
-FLAGS = -Wall -Wextra -Werror 
+FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 IFLAGS = -I $(HEADER)
 
@@ -26,9 +26,6 @@ all: $(NAME)
 
 $(NAME): 
 		$(CC) $(SRC) $(FLAGS) -o $(NAME)
-
-# %.o: %.cpp
-# 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECT) 
