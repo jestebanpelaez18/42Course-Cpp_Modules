@@ -3,28 +3,32 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 16:41:07 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/13 16:41:20 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/09/21 22:24:34 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = MyAwesomePhoneBook
 
-SRC = megaphone.cpp
+SRC = main.cpp PhoneBook.cpp 
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = megaphone.hpp
+HEADER = Contact.hpp PhoneBook.hpp 
 
-FLAGS = -Wall -Wextra -Werror
-CC = c++
+FLAGS = -Wall -Wextra -Werror 
+CC = clang++
+IFLAGS = -I $(HEADER)
 
 
 all: $(NAME)
 
-$(NAME):  $(OBJECT) $(HEADER)
-		$(CC) $(FLAGS) $(OBJECT) -o $(NAME) 
+$(NAME): 
+		$(CC) $(SRC) $(FLAGS) -o $(NAME)
+
+# %.o: %.cpp
+# 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECT) 

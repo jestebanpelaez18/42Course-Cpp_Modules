@@ -3,23 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:05:02 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/20 19:45:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:28:51 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void firts_message()
+void PhoneBook::firts_message()
 {
     std::cout << "-------My Awesome PhoneBook-------" << std:: endl;
     std::cout << "Choose a command:" << std:: endl;
     std::cout << "1.ADD - 2.SEARCH - 3.EXIT";
 }
 
-void print_contact_list()
+void PhoneBook::check_size(std::string str)
+{
+    std::cout << "|" << std::setw(10);
+    if(str.size() > 10)
+    {
+        str.resize(9);
+        std::cout << str << ".";
+    }
+    else 
+        std:: cout << str;
+}
+
+void PhoneBook::print_contact_list()
 {
     PhoneBook Book;
     
@@ -31,13 +43,13 @@ void print_contact_list()
     std::cout << "|";
     for(int i=0; i < 8; i++)
     {
-        std::cout << "|" << std::setw(10) << Book.contacts[i].name;
-        std::cout << "|" << std::setw(10) << Book.contacts[i].last_name;
-        std::cout << "|" << std::setw(10) << Book.contacts[i].nick_name;
+        check_size(Book.contacts[i].name);
+        check_size(Book.contacts[i].last_name);
+        check_size(Book.contacts[i].nick_name);
     }
 }
 
-void check_number_contacts(void)
+void PhoneBook::check_number_contacts(void)
 {
     PhoneBook Book;
     std:: string line;
@@ -49,20 +61,21 @@ void check_number_contacts(void)
         std::cout << "The contact list is full" << std::endl;
         std::cout << "If you want to add more contacts type 'Yes', in other case type 'No'" << std::endl;
         std::getline(std::cin,line);
-        if(line == "Yes" | line == "yes")
+        if(line == "Yes" || line == "yes")
         {
-            //do stuff
+            Book.contacts->index = 0;
+            Book.phonebook_add(Book.contacts->index = 0);
         }
         else
             return;
     }
 }
 
-void search_contact_info(int index)
+void PhoneBook::search_contact_info(int index)
 {
     PhoneBook Book;
     
-    if(index < 8 | index < 0)
+    if(index < 8 || index < 0)
     {
         std::cout << Book.contacts[index].name << std::endl;
         std::cout << Book.contacts[index].last_name << std::endl;
@@ -73,12 +86,15 @@ void search_contact_info(int index)
     else if(index > 7)
     {
         std::cout << "Error, invalid index" << std::endl;
+        std::cout << "Select a index between 1 and 7" << std::endl;
+        std::cin  >> index;
+        Book.search_contact_info(index);
         return ;
     }
 }
 
 
-void phonebook_add(int i)
+void PhoneBook::phonebook_add(int i)
 {
     PhoneBook Book;
     
