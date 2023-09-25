@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:25:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/25 15:22:11 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 16:05:44 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,14 @@ int main(void)
         if(Input == "ADD" || Input == "1")
         {
             Book.check_number_contacts();
-            Book.phonebook_add(i);          
+            Book.phonebook_add(i);
+            // std::cout << i << std:: endl;
+            // std::cout << Book.num_contacs << std:: endl;  
+                      
         }
         else if (Input == "SEARCH" || Input == "2")
         {
             Book.print_contact_list();
-            std::cout << "Which contact info do you want to see?";
-            std::cout << "Select a index between 1 and 7";
-            std::cin  >> index;
-            Book.search_contact_info(index);
         }
         else if(Input == "EXIT" || Input == "3")
             exit(0);  

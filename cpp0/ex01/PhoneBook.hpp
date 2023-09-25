@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:41:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/25 15:09:37 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:52:30 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ class PhoneBook
     void firts_message(void);    
     void print_contact_list(void);
     void check_number_contacts(void);
-    void search_contact_info(int index); 
     void phonebook_add(int& i);
     bool status;
     
     private:
     void  check_size(std::string str);
+    void search_contact_info(int index); 
 };
 
 #endif

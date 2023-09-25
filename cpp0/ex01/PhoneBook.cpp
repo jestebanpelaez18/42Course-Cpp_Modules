@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:05:02 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/25 15:18:38 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/25 16:27:33 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,22 @@ void PhoneBook::firts_message()
 
 void PhoneBook::check_size(std::string str)
 {
-    std::cout << "|" << std::setw(10);
+    std::cout << "|" << std::setw(10) ;
     if(str.size() > 10)
     {
         str.resize(9);
-        std::cout << str << ".";
+        str.append(".");
+        std::cout << str;
     }
-    else 
+    else
+    { 
         std:: cout << str;
+    }
 }
 
 void PhoneBook::print_contact_list()
 {
-    PhoneBook Book;
+    int index = 0;
     
     std::cout << "\n|";
     std::cout << std::setw(10) << "INDEX";
@@ -43,10 +46,17 @@ void PhoneBook::print_contact_list()
     std::cout << "|";
     for(int i=0; i < 8; i++)
     {
+        std::cout << "\n|";
+        std::cout << std::setw(10) << i;
         check_size(contacts[i].name);
         check_size(contacts[i].last_name);
         check_size(contacts[i].nick_name);
+        std::cout << "|";
     }
+    std::cout << std:: endl << "Which contact info do you want to see?" << std:: endl;
+    std::cout << "Select a index between 1 and 7" << std:: endl;
+    std::cin  >> index;
+    search_contact_info(index);
 }
 
 void PhoneBook::check_number_contacts(void)
@@ -78,8 +88,6 @@ void PhoneBook::search_contact_info(int index)
         std::cout << contacts[index].name << std::endl;
         std::cout << contacts[index].last_name << std::endl;
         std::cout << contacts[index].nick_name << std::endl;
-        std::cout << contacts[index].phone_number << std::endl;
-        std::cout << contacts[index].darkest_secret << std::endl;
     }
     else if(index > 7)
     {
@@ -87,7 +95,6 @@ void PhoneBook::search_contact_info(int index)
         std::cout << "Select a index between 1 and 7" << std::endl;
         std::cin  >> index;
         search_contact_info(index);
-        return ;
     }
 }
 
