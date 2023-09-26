@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/12 16:34:27 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/25 18:57:12 by jpelaez-         ###   ########.fr        #
+#    Created: 2023/09/26 18:09:06 by jpelaez-          #+#    #+#              #
+#    Updated: 2023/09/26 18:11:18 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = MyAwesomePhoneBook
 
-SRC = megaphone.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
@@ -22,8 +22,8 @@ CC = c++
 
 all: $(NAME)
 
-$(NAME):  $(OBJECT)
-		$(CC) $(FLAGS) $(OBJECT) -o $(NAME) 
+$(NAME): 
+		$(CC) $(SRC) $(FLAGS) -o $(NAME)
 
 clean:
 	rm -f $(OBJECT) 
