@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:53:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/28 16:53:59 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/09/28 17:04:40 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ class Zombie
     std:: string name;
     
     public:
+    Zombie();
     Zombie(std::string name);
     ~Zombie();
     void announce(void);
 
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+ Zombie*    zombieHorde(int N, std::string name);
 
 #endif
