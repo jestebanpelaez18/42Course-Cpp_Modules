@@ -6,11 +6,11 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 18:42:09 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/28 18:57:15 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/09/28 18:57:56 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Thisisbrain
+NAME = ThisIsBrain
 
 SRC = main.cpp 
 
