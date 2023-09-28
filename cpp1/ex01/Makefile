@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/26 18:09:06 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/28 16:48:12 by jpelaez-         ###   ########.fr        #
+#    Created: 2023/09/28 16:47:03 by jpelaez-          #+#    #+#              #
+#    Updated: 2023/09/28 16:53:09 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brainz
+NAME = ZombieHorde
 
 SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
