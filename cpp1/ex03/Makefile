@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 19:00:40 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/28 19:00:48 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/02 16:23:37 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ThisIsBrain
+NAME = Weapon
 
-SRC = main.cpp 
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
