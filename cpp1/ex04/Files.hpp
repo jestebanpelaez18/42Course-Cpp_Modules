@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Files.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:09:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/02 18:13:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:45:55 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@
 class Files
 {
     private:
-    std:: string line;
+    std:: ifstream file;
+    std:: ofstream outfile;
 
     public:
-    void file_replace(std::ifstream& file, std::string s1, std::string s2);
+    void file_replace(std::string file, std::string s1, std::string s2);
+    std::string new_line(std::string line, std::string s1, std::string s2);
 };
 
 

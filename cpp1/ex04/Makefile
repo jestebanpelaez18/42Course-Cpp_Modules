@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 16:45:16 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/10/02 16:45:43 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/03 17:01:32 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = SedIsForLosers
 
-SRC = main.cpp 
+SRC = main.cpp Files.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
