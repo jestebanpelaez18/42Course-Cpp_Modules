@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:23:07 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/08 14:11:40 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:08:40 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,36 @@ class Fixed
     float toFloat(void) const;
     int toInt(void) const;
     
+    /*Comparations operators*/
+
+    bool operator<(Fixed const &f);
+    bool operator>(Fixed const &f);
+    bool operator<=(Fixed const &f);
+    bool operator>=(Fixed const &f);
+    bool operator!=(Fixed const &f);
+    bool operator==(Fixed const &f);
+
+    /*Arithmetic operators*/
+
+    Fixed operator+(Fixed const & f);
+    Fixed operator-(Fixed const & f);
+    Fixed operator*(Fixed const & f);
+    Fixed operator/(Fixed const & f);
+
+    
+   /*Incrementent/decrement operators*/
+
+   Fixed operator++(void);
+   Fixed operator--(void);     
+   Fixed operator++(int);
+   Fixed operator--(int);
+
+   /*Max min fuctions*/
+
+    static const Fixed& min(Fixed const &f, Fixed const &n);
+    static Fixed& min(Fixed &f, Fixed &n);
+    static const Fixed& max(Fixed const &f, Fixed const &n);
+    static Fixed& max(Fixed &f, Fixed &n);
 };
 
 #endif

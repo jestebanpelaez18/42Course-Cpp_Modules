@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:23:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/08 14:11:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:09:12 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,3 +67,108 @@ std::ostream& operator<<(std::ostream& o, Fixed const & f)
     o << f.toFloat();
     return o;
 }
+
+bool Fixed::operator<(Fixed const &f)
+{
+    return(this->getRawBits() < f.getRawBits());
+}
+
+bool Fixed::operator>(Fixed const &f)
+{
+    return(this->getRawBits() > f.getRawBits());
+}
+
+bool Fixed::operator<=(Fixed const &f)
+{
+    return(this->getRawBits() <= f.getRawBits());
+}
+
+bool Fixed::operator>=(Fixed const &f)
+{
+    return(this->getRawBits() >= f.getRawBits());
+}
+
+bool Fixed::operator==(Fixed const &f)
+{
+    return(this->getRawBits() == f.getRawBits());
+}
+
+bool Fixed::operator!=(Fixed const &f)
+{
+    return(this->getRawBits() != f.getRawBits());
+}
+
+Fixed Fixed::operator+(Fixed const & f)
+{
+    return(this->getRawBits() + f.getRawBits());
+}
+
+Fixed Fixed::operator-(Fixed const & f)
+{
+    return(this->getRawBits() - f.getRawBits());
+}
+
+Fixed Fixed::operator*(Fixed const & f)
+{
+    return(this->getRawBits() * f.getRawBits());
+}
+
+Fixed Fixed::operator/(Fixed const & f)
+{
+    return(this->getRawBits() / f.getRawBits());
+}
+
+Fixed Fixed::operator++(void)
+{
+    ++this->fixed_point_number;
+    return *this;
+}    
+
+Fixed Fixed::operator--(void)
+{
+    --this->fixed_point_number;
+    return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed fix(*this);
+    ++this->fixed_point_number;
+    return fix;
+}    
+
+Fixed Fixed::operator--(int)
+{
+    Fixed fix(*this);
+    --this->fixed_point_number;
+    return fix;
+}
+
+Fixed& Fixed::min(Fixed &f, Fixed &n)
+{
+    if(f.getRawBits() < n.getRawBits())
+        return f;
+    return n;
+}
+
+const Fixed& Fixed::min(Fixed const &f, Fixed const &n)
+{
+    if(f.getRawBits() < n.getRawBits())
+        return f;
+    return n;
+}
+
+Fixed& Fixed::min(Fixed &f, Fixed &n)
+{
+    if(f.getRawBits() > n.getRawBits())
+        return f;
+    return n;
+}
+
+const Fixed& Fixed::min(Fixed const &f, Fixed const &n)
+{
+    if(f.getRawBits() > n.getRawBits())
+        return f;
+    return n;
+}
+
