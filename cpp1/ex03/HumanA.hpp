@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 14:25:06 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/02 16:28:05 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:51:13 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class HumanA
 
     public:
     HumanA(std:: string name, Weapon& weapon);
+    ~HumanA();
     void attack();
 };
 
