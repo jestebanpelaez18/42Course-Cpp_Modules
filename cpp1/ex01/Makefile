@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 16:47:03 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/09/28 16:53:09 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/10 14:25:03 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ZombieHorde
 
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 

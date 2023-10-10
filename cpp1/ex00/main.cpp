@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:12:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/09/28 16:45:01 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/10 14:20:44 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,6 @@ int main(void)
 {
     std:: string name;
     Zombie *name2;
-
-
-    std::cout << "Hey, give a name to the Zombie" << std::endl;
-    std::cout << "This case is we will the constructor and the destructor" << std:: endl;
-    std::cin >> name;
-
-    Zombie Zombie(name);
     
     std::cout << "Now we dinamically allocate the memory" << std::endl;
     std::cout << "can you give a new name" << std::endl;
