@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:43:43 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/11 17:39:28 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:02:54 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ClapTrap
     public:
     
     ClapTrap(std:: string name);
+    ClapTrap();
     ~ClapTrap();
     ClapTrap& operator=(ClapTrap const & fp);
     ClapTrap(const ClapTrap & fp);
