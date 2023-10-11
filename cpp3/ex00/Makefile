@@ -6,13 +6,13 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 16:42:44 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/10/11 15:43:04 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/11 16:51:34 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrapp
+NAME = ClapTrap
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp ClapTrap.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
