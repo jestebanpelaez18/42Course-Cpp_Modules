@@ -6,15 +6,20 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:43:48 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/11 18:03:17 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/12 17:28:42 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+    std::cout << "Default ClapTrap constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(std:: string name)
 {
-    std::cout << "constructor called" << std::endl;
+    std::cout << "Default ClapTrap constructor called" << std::endl;
     this->name = name;
     this->Hit_points =  10;
     this->Energy_points =  10;
@@ -23,17 +28,13 @@ ClapTrap::ClapTrap(std:: string name)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Default destructor called" << std::endl;
-}
-ClapTrap::~ClapTrap()
-{
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap & fp)
 {
     *this = fp;
-    std::cout << "Copy constructor called" << std::endl;  
+    std::cout << "Copy ClapTrap constructor called" << std::endl;  
 }
 ClapTrap& ClapTrap::operator=(ClapTrap const & fp)
 {
@@ -46,12 +47,12 @@ ClapTrap& ClapTrap::operator=(ClapTrap const & fp)
 
 void ClapTrap::attack(const std::string& target)
 {
-    if(Hit_points == 0)
+    if(Hit_points <= 0)
     {
         std::cout << name << " can not attack, is dead" << std::endl;
         return ;
     }
-    else if(Energy_points == 0)
+    else if(Energy_points <= 0)
     {
         std::cout << name << " can not attack, is without Energy" << std::endl;
         return ;
@@ -73,9 +74,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if(Hit_points == 0)
+    if(Hit_points <= 0)
     {
-        std::cout << name << " can not attack, is dead" << std::endl;
+        std::cout << name << " can not reapired, is dead" << std::endl;
         return ;
     }
     else if(Energy_points == 0)

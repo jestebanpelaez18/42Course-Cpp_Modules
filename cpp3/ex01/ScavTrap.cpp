@@ -6,11 +6,16 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:10:25 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/11 18:07:18 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/12 17:29:00 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap()
+{
+    std::cout << "Default ScavTrap constructor called" << std::endl;
+}
 
 ScavTrap::ScavTrap(std:: string name)
 {
@@ -29,7 +34,7 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap(const ScavTrap & fp)
 {
     *this = fp;
-    std::cout << "Copy constructor called" << std::endl;  
+    std::cout << "Copy ScavTrap constructor called" << std::endl;  
 }
 ScavTrap& ScavTrap::operator=(ScavTrap const & fp)
 {
@@ -42,7 +47,7 @@ ScavTrap& ScavTrap::operator=(ScavTrap const & fp)
 
 void ScavTrap::attack(const std::string& target)
 {
-    if(Hit_points == 0)
+    if(Hit_points <= 0)
     {
         std::cout << name << " can not attack, is dead" << std::endl;
         return ;
@@ -52,7 +57,7 @@ void ScavTrap::attack(const std::string& target)
         std::cout << name << " can not attack, is without Energy" << std::endl;
         return ;
     }
-    std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage !" << std::endl;
+    std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage !" << std::endl;
     Energy_points--;
 }
 

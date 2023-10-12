@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:10:37 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/11 17:47:35 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/12 17:06:31 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ScavTrap: public ClapTrap
 {   
     
     public:
+    ScavTrap();
     ScavTrap(std:: string name);
     ~ScavTrap();
     ScavTrap& operator=(ScavTrap const & fp);
