@@ -6,13 +6,13 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 16:42:44 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/10/11 17:47:55 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/12 17:46:29 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap
+NAME = FragTrap
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 

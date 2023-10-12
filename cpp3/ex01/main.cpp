@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:43:12 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 17:26:51 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/12 17:43:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
     Scav.attack("Teemu");
     Scav.takeDamage(54);
     Scav.attack("Rasmus");
+    Scav.guardGate();
     Scav.beRepaired(4);
     
     return(0);
