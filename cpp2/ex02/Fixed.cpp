@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:23:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/08 17:09:12 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:53:42 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Fixed & Fixed::operator=(Fixed const & fp)
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member fuction called" << std::endl;
     return this->fixed_point_number;   
 }
 
@@ -52,13 +51,11 @@ void Fixed::setRawBits(int const raw)
 
 Fixed::Fixed(const int val)
 {
-    std::cout << "Int constructor called" << std::endl;
     fixed_point_number = val << number_fractional_bits;
 }
 
 Fixed::Fixed(const float val)
 {
-    std::cout << "Float constructor called" << std::endl;
     fixed_point_number =  std::roundf(val * ( 1 << number_fractional_bits));
 }
 
@@ -66,6 +63,11 @@ std::ostream& operator<<(std::ostream& o, Fixed const & f)
 {
     o << f.toFloat();
     return o;
+}
+
+float Fixed::toFloat(void) const
+{
+    return(float(fixed_point_number) / float(1 << number_fractional_bits));
 }
 
 bool Fixed::operator<(Fixed const &f)
@@ -146,7 +148,7 @@ Fixed Fixed::operator--(int)
 
 Fixed& Fixed::min(Fixed &f, Fixed &n)
 {
-    if(f.getRawBits() < n.getRawBits())
+    if(f < n)
         return f;
     return n;
 }
@@ -158,14 +160,14 @@ const Fixed& Fixed::min(Fixed const &f, Fixed const &n)
     return n;
 }
 
-Fixed& Fixed::min(Fixed &f, Fixed &n)
+Fixed& Fixed::max(Fixed &f, Fixed &n)
 {
-    if(f.getRawBits() > n.getRawBits())
+    if(f > n)
         return f;
     return n;
 }
 
-const Fixed& Fixed::min(Fixed const &f, Fixed const &n)
+const Fixed& Fixed::max(Fixed const &f, Fixed const &n)
 {
     if(f.getRawBits() > n.getRawBits())
         return f;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:23:07 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/08 17:08:40 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:45:00 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Fixed
     ~Fixed();
     Fixed& operator=(Fixed const & fp);
     Fixed(const Fixed & fp);
-    std::ostream& operator<<(std::ostream& o, Fixed const & f);
 
     Fixed(const int  val);
     Fixed(const float  val);
@@ -70,4 +69,5 @@ class Fixed
     static Fixed& max(Fixed &f, Fixed &n);
 };
 
+std::ostream& operator<<(std::ostream& o, Fixed const & f);
 #endif

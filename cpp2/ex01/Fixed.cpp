@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:23:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/08 14:11:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:43:05 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Fixed & Fixed::operator=(Fixed const & fp)
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member fuction called" << std::endl;
     return this->fixed_point_number;   
 }
 
@@ -66,4 +65,14 @@ std::ostream& operator<<(std::ostream& o, Fixed const & f)
 {
     o << f.toFloat();
     return o;
+}
+
+int Fixed::toInt(void) const
+{
+    return(fixed_point_number >> number_fractional_bits);
+}
+
+float Fixed::toFloat(void) const
+{
+    return(float(fixed_point_number) / float(1 << number_fractional_bits));
 }
