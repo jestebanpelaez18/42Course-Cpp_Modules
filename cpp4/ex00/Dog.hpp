@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:10:48 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:11:31 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:47:03 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog: public Animal
     ~Dog();
     Dog& operator=(Dog const & fp);
     Dog(const Dog & fp);
-    void makeSound();
+    virtual void makeSound() const;
 };
 
 #endif

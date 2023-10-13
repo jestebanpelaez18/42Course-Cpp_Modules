@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:54:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:00:52 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:44:05 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,14 @@ Animal& Animal::operator=(Animal const & fp)
 {
     this->type = fp.type;
     return *this;
+}
+
+std::string Animal::getType(void) const
+{
+    return(type);
+}
+
+void Animal::makeSound() const
+{
+    std::cout << "Animal makes sounds" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:54:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 17:58:26 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:54:02 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ class Animal
     
     public:
     Animal();
-    ~Animal();
+    virtual ~Animal();
     Animal& operator=(Animal const & fp);
     Animal(const Animal & fp);
-
+    std::string getType(void) const;
+    virtual void makeSound() const;
 };
 
 #endif

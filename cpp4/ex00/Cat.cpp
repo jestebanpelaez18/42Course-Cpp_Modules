@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:02:49 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:21:20 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:36:45 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cat& Cat::operator=(Cat const & fp)
     return *this;
 }
 
-void Cat::makeSound()
+void Cat::makeSound() const
 {
     std::cout << "Miauuuuuuu" << std::endl;
 }

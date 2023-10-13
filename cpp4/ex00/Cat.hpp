@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:03:47 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:09:45 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:46:48 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat: public Animal
     ~Cat();
     Cat& operator=(Cat const & fp);
     Cat(const Cat & fp);
-    void makeSound();
+    virtual void makeSound() const;
 };
 
 #endif

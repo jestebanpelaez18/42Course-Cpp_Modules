@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:57:10 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:21:37 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:46:03 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Dog& Dog::operator=(Dog const & fp)
     return *this;
 }
 
-void Dog::makeSound()
+void Dog::makeSound() const 
 {
     std::cout << "Guau guau" << std::endl;
 }
