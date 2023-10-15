@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:54:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/13 17:44:05 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/15 22:22:04 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+    this->type = "Animal";
     std::cout << "Default Animal constructor called" << std::endl;
 }
 
@@ -24,7 +25,7 @@ Animal::~Animal()
 
 Animal::Animal(const Animal & fp)
 {
-    *this = fp;
+    this->type = fp.type;
     std::cout << "Copy Animal constructor called" << std::endl;  
 }
 Animal& Animal::operator=(Animal const & fp)

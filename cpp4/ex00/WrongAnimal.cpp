@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:34:49 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 18:38:54 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/15 22:27:36 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 WrongAnimal::WrongAnimal()
 {
+    this->type = "Wrong Animal";
     std::cout << "Default WrongAnimal constructor called" << std::endl;
 }
 

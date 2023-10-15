@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:02:49 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/13 17:36:45 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/15 22:17:44 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Cat::Cat()
 {
-    std::cout << "Default Cat constructor called" << std::endl;
     this->type = "Cat";
+    std::cout << "Default Cat constructor called" << std::endl;
 }
 
 Cat::~Cat()
@@ -23,14 +23,13 @@ Cat::~Cat()
     std::cout << "Default Cat destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat & fp)
+Cat::Cat(const Cat & fp) : Animal(fp)
 {
-    *this = fp;
     std::cout << "Copy Cat constructor called" << std::endl;  
 }
 Cat& Cat::operator=(Cat const & fp)
 {
-    this->type = fp.type;
+    this->type = fp.getType();
     return *this;
 }
 

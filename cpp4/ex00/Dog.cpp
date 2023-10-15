@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:57:10 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/13 17:46:03 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/15 22:13:08 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Dog::Dog()
 {
-    std::cout << "Default Dog constructor called" << std::endl;
     this->type = "Dog";
+    std::cout << "Default Dog constructor called" << std::endl;
 }
 
 Dog::~Dog()
@@ -23,14 +23,13 @@ Dog::~Dog()
     std::cout << "Default Dog destructor called" << std::endl;
 }
 
-Dog::Dog(const Dog & fp)
+Dog::Dog(const Dog & fp) : Animal(fp)
 {
-    *this = fp;
     std::cout << "Copy Dog constructor called" << std::endl;  
 }
 Dog& Dog::operator=(Dog const & fp)
 {
-    this->type = fp.type;
+    this->type = fp.getType();
     return *this;
 }
 
