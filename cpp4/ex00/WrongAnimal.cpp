@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:34:49 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/15 22:27:36 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/16 13:45:39 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ WrongAnimal& WrongAnimal::operator=(WrongAnimal const & fp)
 {
     this->type = fp.type;
     return *this;
+}
+
+std::string WrongAnimal::getType(void) const
+{
+    return(type);
+}
+
+void WrongAnimal::makeSound() const
+{
+    std::cout << "WrongAnimal makes sounds" << std::endl;
 }

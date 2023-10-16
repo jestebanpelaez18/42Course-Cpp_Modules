@@ -6,13 +6,13 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 16:42:44 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/10/13 17:38:56 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/16 13:58:09 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Animal
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
