@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:10:25 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 17:29:00 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:31:32 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap()
 
 ScavTrap::ScavTrap(std:: string name)
 {
-    std::cout << "Default ScavTrap constructor called" << std::endl;
+    std::cout << "Default ScavTrap name constructor called" << std::endl;
     this->name = name;
     this->Hit_points =  100;
     this->Energy_points =  50;

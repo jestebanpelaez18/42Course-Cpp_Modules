@@ -6,15 +6,20 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:43:48 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/12 17:29:24 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:29:43 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+    std::cout << "Default ClapTrap constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(std:: string name)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default name contstructor called" << std::endl;
     this->name = name;
     this->Hit_points =  10;
     this->Energy_points =  10;
@@ -76,7 +81,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     else if(Energy_points <= 0)
     {
-        std::cout << name << " can not attack, is without Energy" << std::endl;
+        std::cout << name << " can not be repaired, is without Energy" << std::endl;
         return ;
     }
     std::cout << name << " has recovered with " << amount << " hit points back" << std::endl;
