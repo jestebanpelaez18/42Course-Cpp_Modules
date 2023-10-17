@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:54:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/13 17:54:02 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:35:23 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+#define SIZE 4
 
 class Animal
 {   

@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:08:56 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/16 18:15:59 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:32:43 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,22 @@ Brain::Brain()
 
 Brain::~Brain()
 {
-    std::cout << "Default Animal destructor called" << std::endl;
+    std::cout << "Default Brain destructor called" << std::endl;
 }
 
-// Brain::Brain(const Brain & fp)
-// {
-//     this->type = fp.type;
-//     std::cout << "Copy Brain constructor called" << std::endl;  
-// }
-// Brain& Brain::operator=(Brain const & fp)
-// {
-//     this->type = fp.type;
-//     return *this;
-// }
+Brain::Brain(const Brain & fp)
+{
+    for(int i = 100; i < 100; i++)
+    {
+        this->ideas[i] = fp.ideas[i];
+    }
+    std::cout << "Copy Brain constructor called" << std::endl;  
+}
+Brain& Brain::operator=(Brain const & fp)
+{
+    for(int i = 100; i < 100; i++)
+    {
+        this->ideas[i] = fp.ideas[i];
+    }
+    return *this;
+}

@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:57:10 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/16 18:22:15 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:29:51 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Dog::Dog()
 
 Dog::~Dog()
 {
+    delete dogBrain;
     std::cout << "Default Dog destructor called" << std::endl;
 }
 

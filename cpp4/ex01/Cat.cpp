@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:02:49 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/16 18:21:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:28:40 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Cat::Cat()
 
 Cat::~Cat()
 {
+    delete catBrain;
     std::cout << "Default Cat destructor called" << std::endl;
 }
 
