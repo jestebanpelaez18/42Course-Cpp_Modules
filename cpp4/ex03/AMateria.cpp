@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:24:12 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/17 19:06:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:31:39 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,10 @@ AMateria& AMateria::operator=(AMateria const & fp)
 {
     this->type = fp.type;
     return *this;
+}
+
+std::string const &AMateria::getType() const
+{
+    return type;    
 }
 

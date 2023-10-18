@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:17:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/17 16:29:38 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:18:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ int main(void)
         else 
             Animals[i] = new Cat();
     }
-    // std::cout << j->getType() << " " << std::endl;
-    // std::cout << i->getType() << " " << std::endl;
-    // i->makeSound(); //will output the cat sound!
-    // j->makeSound();
-    // meta->makeSound();
 
     for (int i = 0; i < SIZE; ++i) 
         delete Animals[i];
