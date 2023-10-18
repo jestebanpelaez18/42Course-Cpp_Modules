@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:24:23 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 16:36:10 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/18 19:34:56 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AMateria
     AMateria(const AMateria & fp);
     std::string const & getType() const;
     virtual AMateria* clone() const = 0;
-    // virtual void use(ICharacter& target);
+    virtual void use(ICharacter& target);
 };
 
 #endif
