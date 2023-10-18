@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 16:32:29 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 17:35:14 by jpelaez-         ###   ########.fr       */
+/*   Created: 2023/10/18 17:57:19 by jpelaez-          #+#    #+#             */
+/*   Updated: 2023/10/18 18:00:18 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef MATERIA_SOURCE_HPP
+# define MATERIA_SOURCE_HPP
 
 #include <iostream>
 #include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
-class Cure : public AMateria
-{   
+class MateriaSource : public IMateriaSource
+{
     public:
-    Cure();
-    Cure(std::string const & type);
-    ~Cure();
-    Cure& operator=(Cure const & fp);
-    Cure(const Cure & fp);
-    std::string const & getType() const;
-    // virtual Ice* clone() const = 0;
-    // virtual void use(ICharacter& target);
+    MateriaSource();
+    MateriaSource(std::string const & type);
+    ~MateriaSource();
+    MateriaSource& operator=(MateriaSource const & fp);
+    MateriaSource(const MateriaSource & fp);
+    ~IMateriaSource() {}
+    void learnMateria(AMateria*);
+    AMateria* createMateria(std::string const & type);
 };
 
 #endif
