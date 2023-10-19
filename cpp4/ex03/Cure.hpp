@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:32:29 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 17:35:14 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:54:37 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Cure : public AMateria
 {   
@@ -25,8 +26,8 @@ class Cure : public AMateria
     Cure& operator=(Cure const & fp);
     Cure(const Cure & fp);
     std::string const & getType() const;
-    // virtual Ice* clone() const = 0;
-    // virtual void use(ICharacter& target);
+    Cure* clone() const;
+    void use(ICharacter& target);
 };
 
 #endif

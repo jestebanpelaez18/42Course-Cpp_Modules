@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:36:01 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:52:39 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Ice: public AMateria
 {   
@@ -25,8 +26,8 @@ class Ice: public AMateria
     Ice& operator=(Ice const & fp);
     Ice(const Ice & fp);
     std::string const & getType() const;
-    // virtual Ice* clone() const = 0;
-    // virtual void use(ICharacter& target);
+    Ice* clone() const;
+    void use(ICharacter& target);
 };
 
 #endif

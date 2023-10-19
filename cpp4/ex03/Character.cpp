@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:49:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 19:36:58 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:23:17 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void Character::unequip(int idx)
     if(inventory[idx] != NULL)
     {
        delete inventory[idx];
+       inventory[idx] == NULL;
     }
     return ;
 }

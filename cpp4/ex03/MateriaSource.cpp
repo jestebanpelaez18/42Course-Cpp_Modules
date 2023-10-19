@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:54:03 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 18:27:31 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:27:26 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource()
+MateriaSource::MateriaSource() : IMateriaSource()
 {
     std::cout << "Default MateriaSource constructor called" << std::endl;
 }
