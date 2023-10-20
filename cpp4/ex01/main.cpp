@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:17:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/17 18:18:46 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:41:22 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int main(void)
             Animals[i] = new Dog();
         else 
             Animals[i] = new Cat();
+    }
+    
+    for(int i = 0; i < SIZE; i++)
+    {
+        Animals[i]->makeSound();
     }
 
     for (int i = 0; i < SIZE; ++i) 
