@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:54:03 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/20 16:30:59 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:00:58 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@ MateriaSource::MateriaSource()
 }
 MateriaSource::~MateriaSource()
 {
-    for(int i = 0; i < 4; i++)
-    {
-        delete Materias[i];
-    }
     std::cout << "Default MateriaSource destructor called" << std::endl;
 }
 
