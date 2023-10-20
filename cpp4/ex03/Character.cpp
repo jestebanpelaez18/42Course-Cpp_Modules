@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:49:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/20 16:09:11 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:34:09 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ Character::Character(const Character & fp)
 Character& Character::operator=(Character const & fp)
 {
     this->name = fp.name;
+    for(int i = 0; i < 4; i++)
+        inventory[i] = fp.inventory[i];
     return *this;
 }
 
@@ -66,14 +68,17 @@ void Character::equip(AMateria* m)
     for(int i = 0; i < 4; i++)
     {
         if(inventory[i] == NULL)
+        {
             inventory[i] = m;
+            std::cout << "equip fuction called" << std::endl;
+            return ;
+        }
     }
-    std::cout << "equip fuction called" << std::endl;
 }
 
 void Character::unequip(int idx)
 {
-    if(inventory[idx] != NULL)
+    if(inventory[idx])
     {
        delete inventory[idx];
        inventory[idx] = NULL;

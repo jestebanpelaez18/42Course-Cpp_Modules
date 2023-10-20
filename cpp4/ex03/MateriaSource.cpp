@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:54:03 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/20 15:51:04 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:30:59 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ void MateriaSource::learnMateria(AMateria * m)
     for(int i = 0; i  < 4; i++)
     {
         if(Materias[i] == NULL)
+        {
             Materias[i] = m;
+            return ;
+        }
     }
 }
 
