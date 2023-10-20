@@ -6,13 +6,13 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 18:23:43 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/10/17 18:29:17 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/10/20 15:52:07 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = AAnimal
+NAME = AMateria
 
-SRC = main.cpp Amateria.cpp
+SRC = main.cpp Amateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp  
 
 OBJECT = $(SRC:.cpp=.o)
 

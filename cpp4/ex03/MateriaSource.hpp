@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:57:19 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/19 15:29:37 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:28:41 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class MateriaSource : public IMateriaSource
     ~MateriaSource();
     MateriaSource& operator=(MateriaSource const & fp);
     MateriaSource(const MateriaSource & fp);
-    void learnMateria(AMateria*);
+    void learnMateria(AMateria* m);
     AMateria* createMateria(std::string const & type);
 };
 

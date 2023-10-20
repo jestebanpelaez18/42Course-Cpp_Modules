@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:29:41 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 17:52:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:08:45 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 #include <iostream>
+
+class AMateria; //Forwar declaration
 
 class ICharacter
 {

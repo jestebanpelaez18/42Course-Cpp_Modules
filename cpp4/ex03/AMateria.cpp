@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:24:12 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 16:31:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:13:29 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,7 @@ std::string const &AMateria::getType() const
     return type;    
 }
 
+void AMateria::use(ICharacter &target)
+{
+    std::cout << " AMateria  " << target.getName() << std::endl;
+}

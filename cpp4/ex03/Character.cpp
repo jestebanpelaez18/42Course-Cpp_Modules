@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:49:40 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/19 15:23:17 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:09:11 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Character::Character()
 {
-    for(int i = 0; i = 4; i++)
+    for(int i = 0; i < 4; i++)
     {
         inventory[i] = NULL;
     }
@@ -25,7 +25,7 @@ Character::Character(std::string name)
 {
     
     this->name = name;
-    for(int i = 0; i = 4; i++)
+    for(int i = 0; i < 4; i++)
     {
         inventory[i] = NULL;
     }
@@ -33,7 +33,7 @@ Character::Character(std::string name)
 }
 Character::~Character()
 {
-    for(int i = 0; i = 4; i++)
+    for(int i = 0; i < 4; i++)
     {
         delete inventory[i];
     }
@@ -43,7 +43,7 @@ Character::~Character()
 Character::Character(const Character & fp)
 {
     this->name = fp.name;
-    for(int i = 0; i = 4; i++)
+    for(int i = 0; i < 4; i++)
     {
         delete inventory[i];
         inventory[i] = fp.inventory[i];
@@ -63,7 +63,7 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-    for(int i = 0; i = 4; i++)
+    for(int i = 0; i < 4; i++)
     {
         if(inventory[i] == NULL)
             inventory[i] = m;
@@ -76,7 +76,7 @@ void Character::unequip(int idx)
     if(inventory[idx] != NULL)
     {
        delete inventory[idx];
-       inventory[idx] == NULL;
+       inventory[idx] = NULL;
     }
     return ;
 }

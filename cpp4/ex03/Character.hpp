@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:44:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/18 19:34:29 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:47:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class Character: public ICharacter
 
     public:
     Character();
-    Character(std::string const & type);
     Character(std::string name);
     ~Character();
     Character& operator=(Character const & fp);
