@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:17:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/10/17 18:22:33 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:45:15 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ int main(void)
         else 
             Animals[i] = new Cat();
     }
-
+        
+    for(int i = 0; i < SIZE; i++)
+    {
+        Animals[i]->makeSound();
+    }
     for (int i = 0; i < SIZE; ++i) 
         delete Animals[i];
     
