@@ -3,26 +3,28 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 15:56:00 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/11/27 16:33:25 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/11/30 18:08:30 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  Bureaucrat
 
-SRC = Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJECT = $(SRC:.cpp=.o)
+HEADER = Bureaucrat.hpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
+INCLUDES = -Iincludes -I
 
 all: $(NAME)
 
-$(NAME): 
-		$(CC) $(SRC) $(FLAGS) -o $(NAME)
+$(NAME): $(OBJECT) $(HEADER)
+		$(CC) $(INCLUDES) $(FLAGS) $(OBJECT) -o $(NAME)
 
 clean:
 	rm -f $(OBJECT) 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    Bureaucrat.hpp                                    :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:55:10 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/11/27 16:38:13 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:12:21 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,36 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <exception>
 
 class Bureaucrat
 {   
     private:
     const std::string name;
-    int grade[150];
+    int grade;
     
     public:
     Bureaucrat();
+    Bureaucrat(std::string const name, int grade);
     ~Bureaucrat();
     Bureaucrat& operator=(Bureaucrat const & fp);
     Bureaucrat(const Bureaucrat & fp);
-    void getName();
-    void getGrade();
+    std::string getName() const;
+    int getGrade() const;
     void incrementBureaucrat();
     void decrememtBureaucrat();
+    class GradeTooHighException: public std::exception
+    {
+        const char * what () const throw () {
+        return "Grade too high";
+        }
+    };
+    class GradeTooLowException: public std::exception
+    {
+        const char * what () const throw () {
+        return "Grade too low";
+        }
+    };
     
 };
 
