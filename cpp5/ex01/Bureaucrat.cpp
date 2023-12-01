@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:37:32 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/11/30 18:26:29 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/01 15:26:05 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,11 @@ void Bureaucrat::decrememtBureaucrat()
     throw GradeTooLowException();
   ++grade;
 }
+
+// void Bureaucrat::singForm(Form & object)
+// {
+//   if(object.is)
+// }
 
 std::ostream& operator<<(std::ostream& o, Bureaucrat const & f)
 {
