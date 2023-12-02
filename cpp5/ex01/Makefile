@@ -6,16 +6,16 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 15:56:00 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/11/30 18:08:30 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/02 19:52:09 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Bureaucrat
+NAME =  Form
 
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = Bureaucrat.hpp
+HEADER = Bureaucrat.hpp Form.hpp\
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

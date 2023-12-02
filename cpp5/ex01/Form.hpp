@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 18:34:58 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/02 18:54:33 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/02 19:33:10 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,20 @@
 #include <exception>
 #include "Bureaucrat.hpp"
 
+
+class Bureaucrat;
+
 class Form
 {   
     private:
     std::string const name;
-    bool is_signed;
     int const grade_to_sig;
     int const grade_to_exc;
+    bool is_signed;
 
     public:
     Form();
-    Form(std::string const name, int grade_sig, int grade_exc);
+    Form(std::string const name, int const grade_sig, int const grade_exc);
     ~Form();
     Form& operator=(Form const & fp);
     Form(const Form & fp);
