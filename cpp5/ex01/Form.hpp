@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 18:34:58 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/01 15:20:58 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/02 18:54:33 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Form
     std::string getName() const;
     int getGradeToSig() const;
     int getGradeToExc() const;
-    bool getSigned();
+    bool getSigned() const;
     void beSigned(Bureaucrat & object);
     class GradeTooHighException: public std::exception
     {

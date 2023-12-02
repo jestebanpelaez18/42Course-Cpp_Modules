@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:37:32 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/01 15:26:05 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/02 19:13:30 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,19 @@ void Bureaucrat::decrememtBureaucrat()
   ++grade;
 }
 
-// void Bureaucrat::singForm(Form & object)
-// {
-//   if(object.is)
-// }
+void Bureaucrat::singForm(Form & object)
+{
+  try
+  {
+    object.beSigned(*this);
+    std::cout << *this << " signed " << object.getName() << std::endl;
+  }
+  catch(const std::exception &e)
+  {
+    std::cerr << name << " couldn’t sign " << object.getName() << " because " << e.what() << '\n';
+  }
+  
+}
 
 std::ostream& operator<<(std::ostream& o, Bureaucrat const & f)
 {
