@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:37:32 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/02 19:13:30 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:08:21 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Bureaucrat::singForm(Form & object)
   try
   {
     object.beSigned(*this);
-    std::cout << *this << " signed " << object.getName() << std::endl;
+    std::cout << name << " signed " << object.getName() << std::endl;
   }
   catch(const std::exception &e)
   {
