@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 17:36:22 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/03 18:02:27 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:33:48 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include <iostream>
 #include <exception>
+#include "AForm.hpp"
 
-class RobotomyRequestForm
+class RobotomyRequestForm: public AForm
 {
     private:
 

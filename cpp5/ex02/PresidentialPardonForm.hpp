@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 17:36:12 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/03 18:03:40 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:32:28 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include <iostream>
 #include <exception>
+#include "AForm.hpp"
 
-class PresidentialPardonForm
+class PresidentialPardonForm: public AForm
 {
     private:
 
