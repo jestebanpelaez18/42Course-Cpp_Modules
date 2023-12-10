@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:37:32 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/03 17:08:21 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/10 16:25:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Bureaucrat::decrememtBureaucrat()
   ++grade;
 }
 
-void Bureaucrat::singForm(Form & object)
+void Bureaucrat::singForm(AForm & object)
 {
   try
   {
@@ -75,6 +75,20 @@ void Bureaucrat::singForm(Form & object)
   }
   
 }
+void Bureaucrat::executeForm(AForm const & form)
+{
+    try
+    {
+      form.execute(*this);
+      std::cout << *this << " execute " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << *this << " did not execute " << form.getName() << " because " << e.what() << '\n';
+    }
+    
+}
+
 
 std::ostream& operator<<(std::ostream& o, Bureaucrat const & f)
 {

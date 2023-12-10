@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 17:36:34 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/07 17:33:35 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:46:47 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <exception>
+#include <fstream>
 #include "AForm.hpp"
 
 class ShrubberyCreationForm: public AForm
@@ -30,6 +31,7 @@ class ShrubberyCreationForm: public AForm
     ~ShrubberyCreationForm();
     ShrubberyCreationForm& operator=(ShrubberyCreationForm const & fp);
     ShrubberyCreationForm(const ShrubberyCreationForm & fp);
+    void execute(Bureaucrat const & executor) const;
 };
 
 #endif

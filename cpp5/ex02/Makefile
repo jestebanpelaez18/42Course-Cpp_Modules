@@ -6,16 +6,16 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 15:56:00 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/02 19:52:09 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/10 16:24:37 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Form
+NAME =  AForm
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = Bureaucrat.hpp Form.hpp\
+HEADER = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp\
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

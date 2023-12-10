@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 17:36:18 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/07 17:40:55 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/10 16:41:03 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,28 @@ RobotomyRequestForm::~RobotomyRequestForm()
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const & fp)
 {
-    
+    target = fp.target;
+    return *this;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & fp): target(fp.target)
 {
-    
+    *this = fp;
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+    if(executor.getGrade() > this->getGradeToExc())
+        throw AForm::GradeTooLowException();
+    else
+    {
+        std::cout << "Makes some drilling noises. " << std::endl;
+        static int i;
+        if(i % 2 == 0)
+            std::cout << target << " has been robotomized" << std::endl;
+        else 
+            std::cout << "the robotomy failed" << std::endl;
+        i++;
+    }  
+
 }

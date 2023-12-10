@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:55:10 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/07 17:44:22 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/10 16:07:55 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 #include <iostream>
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {   
@@ -33,7 +33,7 @@ class Bureaucrat
     Bureaucrat(const Bureaucrat & fp);
     std::string getName() const;
     int getGrade() const;
-    void singForm(Form & object);
+    void singForm(AForm & object);
     void incrementBureaucrat();
     void decrememtBureaucrat();
     void executeForm(AForm const & form);
