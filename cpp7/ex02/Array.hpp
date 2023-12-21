@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 18:33:29 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/20 12:19:06 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/21 19:10:51 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,42 +23,41 @@ class Array
     private:
 
     T* array;
-    unsigned int size;
+    unsigned int ar_size;
         
     public:
-    Array(): array(new T[0]), size(0) {};
-    Array(unsigned int n): array(new T[n]), size(n) {};
+    Array(): array(new T[0]), ar_size(0) {};
+    Array(unsigned int n): array(new T[n]), ar_size(n) {};
     ~Array()
     {
         if(array)
+        {
             delete[] array;
-    };
+        }
+    }
     Array& operator=(Array const & fp)
     {
-        size = fp.size;
+        ar_size = fp.ar_size;
         delete[] array;
-        array = new T[size];
-        for (int i = 0; i < size; i++)
+        array = new T[ar_size];
+        for (int i = 0; i < ar_size; i++)
             array[i] = fp.array[i];
-    };
-    Array(const Array & fp): size(fp.size), array(new T[size]);
+        return *this;
+    }
+    Array(const Array & fp): ar_size(fp.ar_size), array(new T[ar_size])
     {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < ar_size; i++)
             array[i] = fp.array[i];
     }
-    unsigned int size()
-    { return(size);};
+    unsigned int size() const
+    { 
+        return(ar_size);
+    }
     T& operator[](unsigned int i)
     {
-        if(i < size)
-            throw OutOfBounds();
+        if(i >= ar_size)
+            throw std::out_of_range("Index out of bounds");
         return(array[i]);
     }
-    class OutOfBounds: public std::out_of_range
-    {
-        const char * what () const throw () {
-        return "Index out of bounds";
-        }
-    };
 };
 #endif

@@ -6,13 +6,13 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/19 18:57:36 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/21 18:26:51 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Array
+NAME = array
 
-SRC = main.cpp Array.tpp
+SRC = main.cpp 
 
 OBJECT = $(SRC:.cpp=.o)
 HEADER = Array.hpp\
