@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:11:13 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 11:45:09 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/24 16:40:46 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 #include <algorithm>
 #include <exception>
 #include <vector>
-
+#include <cmath>
+#include <cstdlib>
 
 class Span
 {
@@ -33,6 +34,7 @@ class Span
     Span(const Span & fp);
     unsigned int getSize();
     void addNumber(int number);
+    void getNumbers();
     int shortestSpan() const;
     int longestSpan() const;
 };
