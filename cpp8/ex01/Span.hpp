@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:11:13 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/23 12:16:55 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/24 11:45:09 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,26 @@
 #include <iostream>
 #include <algorithm>
 #include <exception>
+#include <vector>
 
 
 class Span
 {
     private:
-    unsigned int N;
+    std::vector<int> int_vect;
+    unsigned int vec_size;
     
     public:
     Span();
-    Span(unsigned int n): N(n){};
+    Span(unsigned int N);
     ~Span();
     Span& operator=(Span const & fp);
     Span(const Span & fp);
-    void addNumber();
+    unsigned int getSize();
+    void addNumber(int number);
+    int shortestSpan() const;
+    int longestSpan() const;
 };
+
+std::ostream& operator<<(std::ostream& o, Span const & f);
 #endif

@@ -5,33 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 12:10:58 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 11:45:37 by jpelaez-         ###   ########.fr       */
+/*   Created: 2023/12/17 13:01:54 by jpelaez-          #+#    #+#             */
+/*   Updated: 2023/12/19 18:05:58 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
+#include "whatever.hpp"
 
-int main() 
+int main(void)
 {
-    /*Subject Examples*/
-    Span sp = Span(5);
-    sp.addNumber(6);
-    sp.addNumber(3);
-    sp.addNumber(17);
-    sp.addNumber(9);
-    sp.addNumber(11);
+    int a = 2;
+    int b = 3;
 
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
-    /*Test were we had more values in a full vector*/
-    try
-    {
-        sp.addNumber(12);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    return 0; 
+    swap(a,b);
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << "The min is : " << min(a,b) << std::endl;
+    std::cout << "The max is : " << max(a,b) << std::endl;
+    
+    std::string s1 = "chaine1";
+    std::string s2 = "chaine2";
+    
+    swap(s1,s2);
+    std::cout << s1 << std::endl;
+    std::cout << s2 << std::endl;
+    std::cout << "The min is : " << min(s1,s2) << std::endl;
+    std::cout << "The max is : " << max(s1,s2) << std::endl;
 }

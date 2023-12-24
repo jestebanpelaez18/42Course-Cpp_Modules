@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:48:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/11 16:21:54 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/11 20:16:48 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ ScalarConverter& ScalarConverter::operator=(ScalarConverter const & fp)
 int ScalarConverter::is_int(std::string value)
 {
     int i = 0;
-while(value[i])
-{
+    while(value[i])
+    {
     
-}
+    }
 }
 void ScalarConverter::convert(std::string value)
 {

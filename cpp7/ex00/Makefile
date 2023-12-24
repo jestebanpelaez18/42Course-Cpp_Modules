@@ -6,16 +6,16 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/17 13:00:32 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/17 13:01:41 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Base
+NAME =  whatever
 
-SRC = main.cpp Base.cpp
+SRC = main.cpp 
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = Base.hpp A.hpp B.hpp C.hpp\
+HEADER = whatever.hpp\
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

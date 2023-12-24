@@ -6,11 +6,11 @@
 #    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/23 12:18:26 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/24 11:27:50 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = easyfind
+NAME = Span
 
 SRC = main.cpp Span.cpp
 
