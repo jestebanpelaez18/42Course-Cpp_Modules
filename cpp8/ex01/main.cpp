@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:10:58 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 16:41:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:50:14 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,34 @@ int main()
     //     std::cerr << e.what() << '\n';
     // } 
     /*Test with random numbers*/
-    Span rn = Span(5);
+    // Span rn = Span(5);
 
-    for (int i = 0; i < 5; i++)
-        rn.addNumber(rand() % 100);
+    // for (int i = 0; i < 5; i++)
+    //     rn.addNumber(rand() % 100);
     
-    rn.getNumbers();
-    std::cout << rn.shortestSpan() << std::endl;
-    std::cout << rn.longestSpan() << std::endl; 
+    // rn.getNumbers();
+    // std::cout << rn.shortestSpan() << std::endl;
+    // std::cout << rn.longestSpan() << std::endl; 
+    // try
+    // {
+    //     rn.addNumber(67);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+
+    /*Function that creates random vectors*/
+
+    Span rn2 = Span(5);
+
+    rn2.addRandomNumbers();
+    rn2.getNumbers();
+    std::cout << rn2.shortestSpan() << std::endl;
+    std::cout << rn2.longestSpan() << std::endl; 
     try
     {
-        rn.addNumber(67);
+        rn2.addNumber(67);
     }
     catch(const std::exception& e)
     {

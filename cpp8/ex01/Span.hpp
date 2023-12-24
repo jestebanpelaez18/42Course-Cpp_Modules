@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:11:13 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 16:40:46 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/24 16:47:05 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Span
     unsigned int getSize();
     void addNumber(int number);
     void getNumbers();
+    void addRandomNumbers();
     int shortestSpan() const;
     int longestSpan() const;
 };

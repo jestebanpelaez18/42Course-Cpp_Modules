@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:11:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 16:40:52 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:48:26 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ void Span::addNumber(int number)
     if(int_vect.size() == getSize())
         throw std::invalid_argument("Can not store more values");
     int_vect.push_back(number);
+}
+
+void Span::addRandomNumbers()
+{
+    for(int i = 0; i < vec_size; ++i)
+        int_vect.push_back(rand() % 1000);
 }
 
 int Span::shortestSpan() const
