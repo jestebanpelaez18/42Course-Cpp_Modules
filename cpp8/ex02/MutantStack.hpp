@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:56:19 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/26 21:54:56 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/28 16:34:21 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <algorithm>
 #include <stack>
 #include <iterator>
+#include <list>
 
 template <class T>
 class MutantStack: public std::stack<T>
@@ -30,7 +31,7 @@ class MutantStack: public std::stack<T>
     {}
     MutantStack& operator=(MutantStack const & fp)
     {
-        *this = fp;
+        std::stack<T>::operator=(fp);
         return *this;
     }
     MutantStack(const MutantStack & fp)

@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:56:07 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/26 21:54:20 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2023/12/28 16:38:16 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,27 @@ int main()
         ++it; 
     }
     std::stack<int> s(mstack); 
+
+
+    std::cout << "LIST TESTS" << std::endl;
+    std::list<int> list;
+    list.push_back(5);
+    list.push_back(17);
+    std::cout << list.back() << std::endl;
+    list.pop_back();
+    std::cout << list.size() << std::endl;
+    list.push_back(3);
+    list.push_back(5);
+    list.push_back(737);
+    std::list<int>::iterator it_2 = list.begin(); 
+    std::list<int>::iterator ite_2 = list.end();
+    ++it_2;
+    --it_2;
+    while (it_2 != ite_2) 
+    {
+        std::cout << *it_2 << std::endl;
+        ++it_2; 
+    }
+    std::list<int> l(list); 
     return 0;
 }
