@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/11 14:48:33 by jpelaez-         ###   ########.fr        #
+#    Updated: 2023/12/29 18:32:58 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  convert
+NAME =  converter
 
-SRC = 
+SRC = ScalarConverter.cpp main.cpp
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = \
+HEADER = ScalarConverter.hpp\
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

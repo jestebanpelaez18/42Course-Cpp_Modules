@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:49:19 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/28 19:21:52 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/01 18:53:53 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,30 @@ class ScalarConverter
     ScalarConverter(const ScalarConverter & fp);
     
     int type;
+    std:: string parameter;
     bool isImposible;
+    bool isImposiblef;
     char c;
     int n;
     float f;
     double d;
     
     public:
-    void convert(std::string &value);
+    static void convert(std::string value);
     bool is_int(std::string value);
-    void set_type(std::string &value);
-    bool is_char(std::string &value);
+    void set_type(std::string value);
+    bool is_char(std::string value);
+    bool is_float(std::string value);
+    bool is_double(std::string value);
     void set_char(char value);
-    void print_char();
-    void set_int(std::string &value);
-     void print_int();
+    void print_char() const;
+    void set_int(std::string value);
+    void print_int() const;
+    void set_float(std::string value);
+    void print_float() const;
+    void set_double(std::string value);
+    void print_double() const;
+
 };
 
 std::ostream& operator<<(std::ostream& o, ScalarConverter const & f);
