@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:48:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/01 19:28:12 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/01 19:34:01 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void ScalarConverter::print_char() const
     if(!parameter.compare("nan") || !parameter.compare("-inf")  || !parameter.compare("+inf")  || !parameter.compare("-inff")
     || !parameter.compare("+inff") || !parameter.compare("nanf"))
         std::cout << "is Impossible" << std:: endl;
-    else if(!std::isprint(n) || isImposible == true || !std::isalpha(c))
+    else if(!std::isprint(n) || isImposible == true)
         std::cout << "Non displayable" << std::endl;
     else 
         std::cout << c << std::endl;
