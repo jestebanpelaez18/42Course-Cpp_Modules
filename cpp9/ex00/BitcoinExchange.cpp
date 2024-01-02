@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/02 17:50:46 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/02 18:00:57 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ void BitcoinExchange::read_input(std::string name_file)
         std::cout << "Error trying to open the file" << std::endl;
         return ;
     }
-    
+    std::string line;
+    while(getline(file, line))
+           std::cout << line << std::endl;
     file.close();
 }
+
