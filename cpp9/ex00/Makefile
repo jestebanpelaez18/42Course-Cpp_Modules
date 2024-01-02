@@ -6,16 +6,16 @@
 #    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2024/01/02 17:12:49 by jpelaez-         ###   ########.fr        #
+#    Updated: 2024/01/02 18:04:02 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = btc
 
-SRC = main.cpp 
+SRC = main.cpp BitcoinExchange.cpp
 
 OBJECT = $(SRC:.cpp=.o)
-HEADER = MutantStack.hpp\
+HEADER = BitcoinExchange.hpp\
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++

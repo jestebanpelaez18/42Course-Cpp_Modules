@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/02 18:00:57 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/02 18:03:02 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,12 @@ void BitcoinExchange::read_input(std::string name_file)
         return ;
     }
     std::string line;
-    while(getline(file, line))
-           std::cout << line << std::endl;
+    int i = 0;
+    while(getline(file, line) && i < 10)
+    {
+        std::cout << line << std::endl;
+        i++;
+    }
     file.close();
 }
 
