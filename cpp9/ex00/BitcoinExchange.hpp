@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/02 17:50:38 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/03 15:40:08 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 #include <iostream>
 #include <exception>
 #include <fstream>
+#include <map>
 
 class BitcoinExchange
 {
     private:
     std:: ifstream file;
-
+    std::map<std::string,std::string> new_map;
     
     public:
     BitcoinExchange();
