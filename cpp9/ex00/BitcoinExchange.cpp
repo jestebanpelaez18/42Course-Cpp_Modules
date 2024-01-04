@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/04 15:05:26 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/04 16:46:59 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ bool BitcoinExchange::check_date(std::string date)
     }
     return true;
 }
+
 void BitcoinExchange::read_input(std::string name_file)
 {
     std::ifstream file;
@@ -149,6 +150,8 @@ void BitcoinExchange::read_input(std::string name_file)
             continue;
         if(!check_btc_value(btcs))
             continue ;  
+        std::map<std::string,std::string>::iterator it;
+        
     }
     file.close();
 }
