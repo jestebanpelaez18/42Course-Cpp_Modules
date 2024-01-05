@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:48:55 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/01 19:34:01 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:08:33 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 ScalarConverter::ScalarConverter()
 {
-    
+    this->overflow = false;
+    this->isImposiblef = false;
+    this->is_string = false;
+    this->type = 0;
+    this->n = 0;
+    this->d = 0.0;
+    this->f = 0.0f;
+    this->c = '\0';
 }
 
 ScalarConverter::~ScalarConverter()
@@ -37,9 +44,9 @@ ScalarConverter& ScalarConverter::operator=(ScalarConverter const & fp)
 void ScalarConverter::print_int() const
 {
     if(!parameter.compare("nan") || !parameter.compare("-inf")  || !parameter.compare("+inf")  || !parameter.compare("-inff")
-    || !parameter.compare("+inff") || !parameter.compare("nanf"))
+    || !parameter.compare("+inff") || !parameter.compare("nanf") || is_string == true)
             std::cout << "is Impossible" << std:: endl;
-    else if (isImposible == true || isImposiblef == true) 
+    else if (overflow == true || isImposiblef == true) 
         std::cout << "is Impossible" << std:: endl;
     else 
         std::cout << n << std::endl;
@@ -48,9 +55,9 @@ void ScalarConverter::print_int() const
 void ScalarConverter::print_char() const
 {
     if(!parameter.compare("nan") || !parameter.compare("-inf")  || !parameter.compare("+inf")  || !parameter.compare("-inff")
-    || !parameter.compare("+inff") || !parameter.compare("nanf"))
+    || !parameter.compare("+inff") || !parameter.compare("nanf") || overflow == true || is_string == true)
         std::cout << "is Impossible" << std:: endl;
-    else if(!std::isprint(n) || isImposible == true)
+    else if(!std::isprint(n))
         std::cout << "Non displayable" << std::endl;
     else 
         std::cout << c << std::endl;
@@ -62,14 +69,14 @@ void ScalarConverter::print_float() const
             std::cout << parameter << std:: endl;
     else if (!parameter.compare("nan") || !parameter.compare("-inf")  || !parameter.compare("+inf"))
         std::cout << parameter << "f" << std:: endl;
-    else if(isImposiblef == true)
+    else if(isImposiblef == true || overflow == true || is_string == true)
         std::cout << "is Impossible" << std:: endl;
     else 
     {
         if((type == INT || type == CHAR) && parameter.length() < 7)
             std::cout << f << ".0f" << std::endl;
         else
-            std::cout << f << 'f' << std::endl;
+            std::cout << f << ".0f" << std::endl;
     }
 }
 
@@ -81,14 +88,14 @@ void ScalarConverter::print_double() const
         std::cout << "nan" << std::endl;
     else if(!parameter.compare("+inf")  || !parameter.compare("+inff"))
         std::cout << "+inf" << std::endl;
-    else if(isImposiblef == true)
+    else if(isImposiblef == true || overflow == true || is_string == true) 
         std::cout << "is Impossible" << std:: endl;
     else 
     {
         if((type == INT || type == CHAR) && parameter.length() < 7)
             std::cout << d << ".0" << std::endl;
         else
-            std::cout << d << std::endl;
+            std::cout << d << ".0" << std::endl;
     }
 }
 /*Setters*/
@@ -152,12 +159,12 @@ bool ScalarConverter::is_int(std::string value)
         result = result * 10 + (value[j] - '0');
 		if (result > 2147483648 && sing == -1)
         {
-            isImposible = true;
+            overflow = true;
 			return false;
         }
         else if (result > 2147483647 && sing == 1)
         {
-            isImposible = true;
+            overflow = true;
 			return false;       
         }
     }
@@ -249,13 +256,15 @@ bool ScalarConverter::is_char(std::string character)
 {
     if(character.size() == 1 && std::isalpha(character[0]) && std::isprint(character[0]))
         return true;
+    else if(character.size() == 1 && !std::isalpha(character[0]) && std::isprint(character[0]) && !std::isdigit(character[0]))
+        return true;
     return false;
 }
 
 void ScalarConverter::set_type(std::string value)
 {
     parameter = value;
-    isImposible = false;
+    overflow = false;
     isImposiblef = false;
     if(is_char(value))
         type = CHAR;
@@ -265,12 +274,12 @@ void ScalarConverter::set_type(std::string value)
         type = FLOAT;
     else if(is_double(value))
         type = DOUBLE;
+    else
+        type = IMPOSSIBLE;
 }
 void ScalarConverter::convert(std::string value)
 {
     ScalarConverter Scalar;
-    Scalar.isImposible = false;
-    Scalar.isImposiblef = false;
     Scalar.set_type(value);
     switch(Scalar.type)
     {
@@ -285,12 +294,14 @@ void ScalarConverter::convert(std::string value)
         break;
     case DOUBLE:
         Scalar.set_double(value);
+        break;
+    case IMPOSSIBLE:
+        Scalar.overflow = true;
+        break;
     default:
         break;
     }
     std::cout << Scalar;
-    Scalar.isImposible = false;
-    Scalar.isImposiblef = false;
  }
 
 std::ostream& operator<<(std::ostream& o, ScalarConverter const & f)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:49:19 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/01 18:53:53 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:57:14 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define INT 1
 #define FLOAT 2
 #define DOUBLE 3
+#define IMPOSSIBLE 4
 
 class ScalarConverter
 {
@@ -32,8 +33,9 @@ class ScalarConverter
     
     int type;
     std:: string parameter;
-    bool isImposible;
     bool isImposiblef;
+    bool overflow;
+    bool is_string;
     char c;
     int n;
     float f;
