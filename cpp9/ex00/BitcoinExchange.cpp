@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/04 16:46:59 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:38:05 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,11 +87,21 @@ bool BitcoinExchange::check_btc_value(double value)
 
 bool BitcoinExchange::check_date(std::string date)
 {
-    std::string year = date.substr(0,date.find('-'));
-    int int_year = stoi(year);
-    if(int_year < 0 || int_year > 2022)
+    if(date.length() > 10)
     {
-        std::cout << "Error: Bad input. invalid date" << std::endl;
+        std::cout << "Error: Bad input. invalid date " << " => " << date << std::endl;
+        return false;
+    }
+    std::string year = date.substr(0,date.find('-'));
+    if(year.empty())
+    {
+        std::cout << "Error: Bad input. invalid date " << " => " << date << std::endl;
+        return false;
+    }
+    int int_year = stoi(year);
+    if(int_year < 2009 || int_year > 2022)
+    {
+        std::cout << "Error: Bad input. invalid date " << " => " << date << std::endl;
         return false;
     }
     date.erase(0,date.find('-') + 1);      
@@ -150,8 +160,20 @@ void BitcoinExchange::read_input(std::string name_file)
             continue;
         if(!check_btc_value(btcs))
             continue ;  
+            
         std::map<std::string,std::string>::iterator it;
-        
+        std::string currentDate = date;
+        it = info.upper_bound(date);
+
+        if (it == info.begin())
+        {
+            it = info.begin();
+        }
+        else
+        {
+          --it;
+        }
+        std::cout << date << " => " << value << " = " << stod(it->second) * stod(value) << std::endl;
     }
     file.close();
 }
