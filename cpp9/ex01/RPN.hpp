@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:42:46 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/08 18:16:21 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/09 17:24:08 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 class RPN
 {
     private:
+    std::stack<int> operators;
     
     public:
     RPN();
@@ -31,6 +32,8 @@ class RPN
     int substrac(int x, int y);
     int division(int x, int y);
     int multiplication(int x, int y);
+    bool is_operant(char c);
+    void read_input(std::string input);
 };
 
 #endif
