@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:42:34 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/09 17:30:35 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/09 17:39:59 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ void RPN::read_input(std::string input)
     for (int i = 0; i < input.length(); i++)
     {
         if(std::isspace(input[i]))
-            i++;
-        if(std::isdigit(input[i]))
+            continue;
+        else if(std::isdigit(input[i]))
         {
             
         }
