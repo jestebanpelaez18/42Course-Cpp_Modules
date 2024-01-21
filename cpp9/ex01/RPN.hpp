@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:42:46 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/09 17:24:08 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/16 17:11:19 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class RPN
 {
     private:
-    std::stack<int> operators;
+    std::stack<int> operation;
     
     public:
     RPN();
@@ -33,7 +33,9 @@ class RPN
     int division(int x, int y);
     int multiplication(int x, int y);
     bool is_operant(char c);
-    void read_input(std::string input);
+    void read_single_input(std::string input);
+    void select_operation(char input, int a, int b);
+
 };
 
 #endif
