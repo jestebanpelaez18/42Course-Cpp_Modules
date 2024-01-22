@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:19:23 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/22 14:22:49 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:38:30 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main(int argc, char **argv)
     }
     int number;
     std::deque<int> dq;
+    std::vector<int> vc;
     for(int i = 1; i < argc; i++)
     {
         number = atoi(argv[i]);
@@ -38,7 +39,8 @@ int main(int argc, char **argv)
             return (1);   
         }
         dq.push_back(number);
+        vc.push_back(number);
     }
     PMergeMe pmerge;
-    pmerge.run(dq);
+    pmerge.run(dq, vc);
 }
