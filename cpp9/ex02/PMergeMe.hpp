@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PMergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/22 17:41:48 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 21:31:23 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ class PMergeMe
     void run(std::deque<int> &dq_container, std::vector<int> &vc_container);
     template <typename T>
     void print(const T& container);
-    void merge_deque(std::deque<int> &dq_container);
-    void merge_vector(std::vector<int> &vc_container);
+    template <typename T1>
+    void merge_sort(const T1& container, int left, int right);
+    template <typename T1>
+    void merge(const T1& container, int left, int middle, int right);
 };
 
 #endif
