@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:30 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/08 17:38:05 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:14:49 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,32 @@ bool BitcoinExchange::check_days_month(int month, int day)
     }
     return true;
 }
+bool BitcoinExchange::check_days_month_leap_year(int month, int day)
+{
+    int days[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
 
+    for(int i = 0; i <= 12; i++)
+    {
+        if(i == month)
+        {
+            if(day > days[i - 1])
+                return false; 
+        }
+    }
+    return true;
+}
+
+bool BitcoinExchange::is_leap_year(int year)
+{
+    int leap_year[3] = {2012,2016,2020};
+
+    for(int i = 0; i < 3; i++)
+    {
+        if(leap_year[i] == year)
+            return true;
+    }
+    return false;
+}
 bool BitcoinExchange::check_btc_value(double value)
 {
     if(value < 0)
@@ -92,6 +117,7 @@ bool BitcoinExchange::check_date(std::string date)
         std::cout << "Error: Bad input. invalid date " << " => " << date << std::endl;
         return false;
     }
+    std::string temp_date = date;
     std::string year = date.substr(0,date.find('-'));
     if(year.empty())
     {
@@ -109,7 +135,7 @@ bool BitcoinExchange::check_date(std::string date)
     int int_month = stoi(month);
     if(int_month < 1 || int_month > 12)
     {
-        std::cout << "Error: Bad input. invalid date" << std::endl;
+        std::cout << "Error: Bad input. invalid date" << " => " << date << std::endl;
         return false;
     }
     date.erase(0,date.find('-') + 1);      
@@ -117,12 +143,20 @@ bool BitcoinExchange::check_date(std::string date)
     int int_day = stoi(day);
     if(int_day < 1 || int_day > 31)
     {
-        std::cout << "Error: Bad input. invalid date" << std::endl;
+        std::cout << "Error: Bad input. invalid date" << " => " << temp_date << std::endl;
         return false;
     }
-    if(!check_days_month(int_month, int_day))
+    if(is_leap_year(int_year))
     {
-        std::cout << "Error: Bad input. invalid date" << std::endl;
+        if(!check_days_month_leap_year(int_month, int_day))
+        {
+            std::cout << "Error: Bad input. invalid date" << " => " << temp_date << std::endl;
+            return false;
+        }
+    }
+    else if(!check_days_month(int_month, int_day))
+    {
+        std::cout << "Error: Bad input. invalid date" << " => " << temp_date << std::endl;
         return false;
     }
     return true;

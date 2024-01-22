@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:33 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/08 17:23:24 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:59:24 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ class BitcoinExchange
     bool check_btc_value(double value);
     bool check_date(std::string date);
     bool check_days_month(int month, int day);
+    bool check_days_month_leap_year(int month, int day);
+    bool is_leap_year(int year);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/22 17:38:15 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:42:56 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,15 @@ void PMergeMe::print(const T& container)
     std::cout << std::endl;
 }
 
+void PMergeMe::merge_deque(std::deque<int> &dq_container)
+{
+    
+}
+
+void PMergeMe::merge_vector(std::vector<int> &vc_container)
+{
+    
+}
 void PMergeMe::run(std::deque<int> &dq_container, std::vector<int> &vc_container)
 {
     std::cout << "Before: ";
