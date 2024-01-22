@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:19:23 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/21 20:58:56 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:22:49 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int main(int argc, char **argv)
         }
         dq.push_back(number);
     }
-    
-    
+    PMergeMe pmerge;
+    pmerge.run(dq);
 }

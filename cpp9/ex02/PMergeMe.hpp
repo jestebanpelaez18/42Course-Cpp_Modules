@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PMergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/21 20:48:16 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:22:24 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@
 
 class PMergeMe
 {
-
+    public:
+    PMergeMe();
+    ~PMergeMe();
+    PMergeMe& operator=(PMergeMe const & fp);
+    PMergeMe(const PMergeMe & fp);
+    void run(std::deque<int> &container);
 };
 
 #endif
