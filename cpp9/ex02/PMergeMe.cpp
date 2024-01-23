@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:26:35 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:42:25 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void PMergeMe::merge(T1& container, int left, int middle, int right)
     int j = middle + 1;
     int k = left;
 
-    T1 temp(10);
+    T1 temp(container.size());
 
     while(i <= middle && j <= right)
     {
@@ -100,7 +100,7 @@ void PMergeMe::run(std::deque<int> &dq_container, std::vector<int> &vc_container
     clock_t end = clock();
     double time_used = ((double)(end - start)) / (CLOCKS_PER_SEC / 1e6);
     clock_t start2 = clock();
-    merge_sort(dq_container,0, vc_container.size() - 1); 
+    merge_sort(vc_container,0, vc_container.size() - 1); 
     clock_t end2 = clock();
     double time_used2 = ((double)(end2 - start2)) / ((double)CLOCKS_PER_SEC * 1000000);
     std::cout << "After:  ";
