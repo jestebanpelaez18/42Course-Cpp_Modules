@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PMergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/22 21:31:23 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:08:52 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class PMergeMe
     template <typename T>
     void print(const T& container);
     template <typename T1>
-    void merge_sort(const T1& container, int left, int right);
+    void merge_sort(T1& container, int left, int right);
     template <typename T1>
-    void merge(const T1& container, int left, int middle, int right);
+    void merge(T1& container, int left, int middle, int right);
 };
 
 #endif
