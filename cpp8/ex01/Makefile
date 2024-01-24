@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:46:56 by jpelaez-          #+#    #+#              #
-#    Updated: 2023/12/24 11:27:50 by jpelaez-         ###   ########.fr        #
+#    Updated: 2024/01/23 17:52:14 by jpelaez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = main.cpp Span.cpp
 OBJECT = $(SRC:.cpp=.o)
 HEADER = Span.hpp\
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 CC = c++
 INCLUDES = -Iincludes -I
 

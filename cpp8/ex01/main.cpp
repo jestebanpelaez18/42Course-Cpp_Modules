@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:10:58 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 19:50:14 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:54:23 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int main()
 {
     /*Subject Examples*/
     Span sp = Span(5);
-    sp.addNumber(9);
-    sp.addNumber(2);
-    sp.addNumber(17);
     sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
     sp.addNumber(11);
 
     std::cout << sp.shortestSpan() << std::endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpelaez- <jpelaez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 12:11:27 by jpelaez-          #+#    #+#             */
-/*   Updated: 2023/12/24 19:48:26 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:22:38 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ int Span::shortestSpan() const
         throw std::invalid_argument("Can not calculate any span");
     int result = abs(*int_vect.begin() - *(int_vect.begin() + 1));
     int temp = 0;
-    for(auto i = int_vect.begin(); i != int_vect.end(); ++i)
+    std::vector<int>::const_iterator i, j;
+    for(i = int_vect.begin(); i != int_vect.end(); ++i)
     {
-        for(auto j = i + 1; j != int_vect.end(); ++j)
+        for(j = i + 1; j != int_vect.end(); ++j)
         {
             temp = abs(*i - *j);
             if(temp < result)
@@ -74,8 +75,8 @@ int Span::longestSpan() const
         throw std::invalid_argument("Can not calculate any span");
     int min_value = *int_vect.begin();
     int max_value = *int_vect.begin();
-    
-    for (auto i = int_vect.begin(); i != int_vect.end(); ++i)
+    std::vector<int>::const_iterator i;
+    for (i = int_vect.begin(); i != int_vect.end(); ++i)
     {
         if(*i < min_value)
             min_value = *i;
@@ -87,7 +88,8 @@ int Span::longestSpan() const
 
 void Span::getNumbers()
 {
-    for (auto i = int_vect.begin(); i != int_vect.end(); ++i)
+    std::vector<int>::iterator i;
+    for (i = int_vect.begin(); i != int_vect.end(); ++i)
     {
         std::cout << *i << ", ";
     }
