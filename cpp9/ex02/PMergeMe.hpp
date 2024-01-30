@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:08:52 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/29 18:25:39 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ class PMergeMe
     void run(std::deque<int> &dq_container, std::vector<int> &vc_container);
     template <typename T>
     void print(const T& container);
-    template <typename T1>
-    void merge_sort(T1& container, int left, int right);
-    template <typename T1>
-    void merge(T1& container, int left, int middle, int right);
+    void sort_deque(std::deque<int> &container, int left, int right);
+    void sort_vector(std::vector<int> &container, int left, int right);
+    void merge_deque(std::deque<int> &container, int left, int middle, int right);
+    void merge_vector(std::vector<int> &container, int left, int middle, int right);
+    
 };
 
 #endif
