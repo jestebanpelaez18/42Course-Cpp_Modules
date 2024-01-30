@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:04 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/29 18:25:39 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:58:01 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #include <vector>
 #include <iterator>
 #include <ctime>
+#define K 5
 
 class PMergeMe
 {
@@ -36,6 +37,8 @@ class PMergeMe
     void sort_vector(std::vector<int> &container, int left, int right);
     void merge_deque(std::deque<int> &container, int left, int middle, int right);
     void merge_vector(std::vector<int> &container, int left, int middle, int right);
+    void insertion_sort_vector(std::vector<int> &container, int left, int right);
+    void insertion_sort_deque(std::deque<int> &container, int left, int right);
     
 };
 

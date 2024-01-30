@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/30 15:20:41 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:08:00 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,33 @@ void PMergeMe::print(const T& container)
         std::cout << *itr << " ";
     std::cout << std::endl;
 }
+
+void PMergeMe::insertion_sort_deque(std::deque<int> &container, int left, int right)
+{
+    for (int i = left; i < right; i++) {
+        int tempVal = container[i + 1];
+        int j = i + 1;
+        while (j > left && container[j - 1] > tempVal) {
+            container[j] = container[j - 1];
+            j--;
+        }
+        container[j] = tempVal;
+    }
+}
+
+void PMergeMe::insertion_sort_vector(std::vector<int> &container, int left, int right)
+{
+    for (int i = left; i < right; i++) {
+        int tempVal = container[i + 1];
+        int j = i + 1;
+        while (j > left && container[j - 1] > tempVal) {
+            container[j] = container[j - 1];
+            j--;
+        }
+        container[j] = tempVal;
+    }
+}
+
 void PMergeMe::merge_vector(std::vector<int> &container, int left, int middle, int right)
 {
     int i = left;
@@ -118,25 +145,29 @@ void PMergeMe::merge_deque(std::deque<int> &container, int left, int middle, int
 void PMergeMe::sort_deque(std::deque<int> &container, int left, int right)
 {
     int middle;
-    if(left < right)
+    if(right - left > K)
     {
         middle = (left + right) / 2;
         sort_deque(container, left, middle);
         sort_deque(container, middle + 1, right);   
         merge_deque(container, left, middle, right);
     }
+    else
+        insertion_sort_deque(container,left, right);
 }
 
 void PMergeMe::sort_vector(std::vector<int> &container, int left, int right)
 {
     int middle;
-    if(left < right)
+    if(right - left > K)
     {
         middle = (left + right) / 2;
         sort_vector(container, left, middle);
         sort_vector(container, middle + 1, right);   
         merge_vector(container, left, middle, right);
     }
+    else
+        insertion_sort_vector(container,left, right);
 }
 void PMergeMe::run(std::deque<int> &dq_container, std::vector<int> &vc_container)
 {
