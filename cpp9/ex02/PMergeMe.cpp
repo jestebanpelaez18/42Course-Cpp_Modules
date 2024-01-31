@@ -6,7 +6,7 @@
 /*   By: jpelaez- <jpelaez-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:00 by jpelaez-          #+#    #+#             */
-/*   Updated: 2024/01/30 17:08:00 by jpelaez-         ###   ########.fr       */
+/*   Updated: 2024/01/31 16:02:15 by jpelaez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,11 +178,11 @@ void PMergeMe::run(std::deque<int> &dq_container, std::vector<int> &vc_container
     clock_t start = clock();
     sort_deque(dq_container,0, dq_container.size() - 1);
     clock_t end = clock();
-    double time_used = ((double)(end - start)) / (CLOCKS_PER_SEC / 1e6);
+    double time_used = (static_cast<double>(end - start)) / (CLOCKS_PER_SEC) * 1000;
     clock_t start2 = clock();
     sort_vector(vc_container,0, vc_container.size() - 1); 
     clock_t end2 = clock();
-    double time_used2 = ((double)(end2 - start2)) / ((double)CLOCKS_PER_SEC * 1000000);
+    double time_used2 = (static_cast<double>(end2 - start2)) / (CLOCKS_PER_SEC)* 1000;
     std::cout << "After:  ";
     print(dq_container);
     std::cout << "After:  ";
