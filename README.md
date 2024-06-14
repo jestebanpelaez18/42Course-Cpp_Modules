@@ -65,38 +65,38 @@ We have to implement two classes:
 
 In the code, the phonebook must be instantiated as an instance of the PhoneBook class. Same thing for the contacts. Each one of them must be instantiated as an instance of the Contact class.
 
-### C++ Module 01
+### [C++ Module 01](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp1)
 
 This module is about memory Allocation, Pointers To Members, References and Switch Statement
 
-### C++ Module 02
+### [C++ Module 02](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp2)
 
 This module is about Ad-Hoc Polymorphism, Operator Overloading and Orthodox Canonical Class Form. 
 
-### C++ Module 03
+### [C++ Module 03](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp3)
 
 This module is about inheritance
 
-### C++ Module 04
+### [C++ Module 04](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp4)
 
 This module is about subtype Polymorphism, Abstract Classes and Interfaces.
 
-### C++ Module 05
+### [C++ Module 05](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp4)
 
 This module is about repetition an exception handling. 
 
-### C++ Module 06 
+### [C++ Module 06](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp6)
 
 This module is about C++ Cast.
 
-### C++ Module 07
+### [C++ Module 07](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp7)
 
 This module is about C++ templates.
 
-### C++ Module 08
+### [C++ Module 08](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp8)
 
 This module is about templated containers, iterators, and algorithms.
 
-### C++ Module 09
+### [C++ Module 09](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/6cbc3fd014e42868d3c8da0d38fcf6bc60a5322b/cpp9)
 
 This module is about more containers and his usage.
