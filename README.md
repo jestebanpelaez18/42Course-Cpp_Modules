@@ -37,9 +37,33 @@ Depend of the exercise and the goal of it, each has a main with different Tests.
 
 ## Module list
 
-### C++ Module 00
+### [C++ Module 00](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/47799c8d2772011bba47aa1ce209a37d9804f5f9/cpp0)
 
 This module is an Introduction to C++ (Namespaces, Classes, Member Functions, Stdio Streams, Initalization Lists, Static and Const)
+
+[Ex00:Megaphone](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/47799c8d2772011bba47aa1ce209a37d9804f5f9/cpp0/ex00)
+
+This exercise is basically write a program that giving string as an argument we have to return, that string in upper case.
+
+```bash
+>$./Megaphone "shhhhh... I think the students are asleep..."
+SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
+```
+
+[Ex01:My Awesome Phonebook](https://github.com/jestebanpelaez18/42Course-Cpp_Modules/tree/47799c8d2772011bba47aa1ce209a37d9804f5f9/cpp0/ex01)
+
+This exercise is about to Write a program that behaves like a crappy awesome phonebook software.
+We have to implement two classes:
+
+#### PhoneBook
+- It has an array of contacts.
+- It can store a maximum of 8 contacts. If the user tries to add a 9th contact, replace the oldest one by the new one.
+- Please note that dynamic allocation is forbidden.
+
+#### Contact
+- Stands for a phonebook contact.
+
+In the code, the phonebook must be instantiated as an instance of the PhoneBook class. Same thing for the contacts. Each one of them must be instantiated as an instance of the Contact class.
 
 ### C++ Module 01
 
